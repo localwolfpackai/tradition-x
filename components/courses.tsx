@@ -4,16 +4,17 @@ import { renderRich } from "@/lib/rich-text";
 export default function Courses() {
   return (
     <section id="courses" className="sec">
-      <div className="sec-head">
-        <div className="sec-eyebrow">The Battlefield</div>
-        <h2 className="sec-title">
-          The <em>Courses</em>
-        </h2>
-        <p className="sec-sub">Four tracks. Four chances to be a hero or a headline.</p>
-      </div>
+      <div className="sec-inner">
+        <div className="sec-head">
+          <div className="sec-eyebrow">The Battlefield</div>
+          <h2 className="sec-title">
+            The <em>Courses</em>
+          </h2>
+          <p className="sec-sub">Four tracks. Four chances to be a hero or a headline.</p>
+        </div>
 
-      <div>
-        {COURSES.map((c) => (
+        <div className="course-grid">
+          {COURSES.map((c) => (
           <article key={c.round} className="course in">
             <div className="course-top">
               <div className="round-medal">{c.round}</div>
@@ -39,6 +40,7 @@ export default function Courses() {
             </a>
           </article>
         ))}
+        </div>
       </div>
     </section>
   );

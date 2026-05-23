@@ -75,26 +75,26 @@ export const COURSES: Course[] = [
 export type Player = {
   num: number;
   name: string;
-  vip?: boolean;
+  slug: string;
   low?: boolean;
   role?: string;
 };
 
+/* Drop a JPG named after the slug into public/images/players/ (e.g. bobby.jpg)
+   and the card will swap from initials to the photo automatically. */
 export const ROSTER: Player[] = [
-  { num: 1, name: "Wade", vip: true, role: "Host & Commissioner" },
-  { num: 2, name: "Bobby", low: true },
-  { num: 3, name: "Player 03" },
-  { num: 4, name: "Player 04" },
-  { num: 5, name: "Player 05" },
-  { num: 6, name: "Player 06" },
-  { num: 7, name: "Player 07" },
-  { num: 8, name: "Player 08" },
-  { num: 9, name: "Player 09" },
-  { num: 10, name: "Player 10" },
-  { num: 11, name: "Player 11" },
-  { num: 12, name: "Player 12" },
-  { num: 13, name: "Player 13" },
-  { num: 14, name: "Player 14" },
+  { num: 1, name: "Bobby", slug: "bobby", low: true },
+  { num: 2, name: "Brian", slug: "brian" },
+  { num: 3, name: "Lupo", slug: "lupo" },
+  { num: 4, name: "Dan", slug: "dan" },
+  { num: 5, name: "Josh", slug: "josh" },
+  { num: 6, name: "Kyle", slug: "kyle" },
+  { num: 7, name: "Matt", slug: "matt" },
+  { num: 8, name: "Nate", slug: "nate" },
+  { num: 9, name: "Steve", slug: "steve" },
+  { num: 10, name: "Coomes", slug: "coomes" },
+  { num: 11, name: "Jordan", slug: "jordan" },
+  { num: 12, name: "Sam", slug: "sam" },
 ];
 
 export const TOASTS = {

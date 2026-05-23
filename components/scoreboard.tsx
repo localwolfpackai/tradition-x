@@ -22,7 +22,6 @@ function aggregateFor(playerNum: number, scores: Scores): number {
 }
 
 function roleLabel(p: (typeof ROSTER)[number]): string {
-  if (p.vip) return "★ Host";
   if (p.low) return "★ Lowest HC";
   return "The Field";
 }
@@ -159,6 +158,7 @@ export default function Scoreboard() {
 
   return (
     <section id="score" className="sec">
+      <div className="sec-inner">
       <div className="sec-head">
         <div className="sec-eyebrow">The Card</div>
         <h2 className="sec-title">
@@ -220,6 +220,7 @@ export default function Scoreboard() {
         {hasAny
           ? `Aggregate after Round ${latestRoundWithData + 1} · Leader: ${leaderName} (-${leaderGap})`
           : "Awaiting tee time."}
+      </div>
       </div>
     </section>
   );

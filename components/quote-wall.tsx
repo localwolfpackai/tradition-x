@@ -73,6 +73,7 @@ export default function QuoteWall() {
 
   return (
     <section id="quotes" className="sec">
+      <div className="sec-inner">
       <div className="sec-head">
         <div className="sec-eyebrow">Best Lines</div>
         <h2 className="sec-title">
@@ -106,7 +107,7 @@ export default function QuoteWall() {
       {quotes.length === 0 ? (
         <div className="quote-empty">No quotes yet. Be the first asshole to break the seal.</div>
       ) : (
-        <div>
+        <div className="quote-grid">
           {quotes.map((q) => (
             <div key={q.id} className="quote">
               <div className="qt">{q.text}</div>
@@ -117,6 +118,7 @@ export default function QuoteWall() {
           ))}
         </div>
       )}
+      </div>
     </section>
   );
 }

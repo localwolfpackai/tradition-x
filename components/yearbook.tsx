@@ -7,33 +7,35 @@ import Image from "next/image";
 export default function Yearbook() {
   return (
     <section id="yearbook" className="sec yearbook">
-      <div className="sec-head">
-        <div className="sec-eyebrow">The Yearbook</div>
-        <h2 className="sec-title">
-          One <em>Frame</em>
-        </h2>
-        <p className="sec-sub">
-          Eleven years deep. The lies got better. The cigars got nicer. The handicaps did not.
-        </p>
-      </div>
-
-      <figure className="poster">
-        <div className="poster-frame">
-          <Image
-            src="/yearbook.png"
-            alt="Tradition XI — vintage collage: the boys, the bear, the Cadillac, Colorado Springs"
-            width={1041}
-            height={1481}
-            priority={false}
-            sizes="(max-width: 560px) 92vw, 420px"
-            className="poster-img"
-          />
+      <div className="sec-inner sec-inner-narrow">
+        <div className="sec-head">
+          <div className="sec-eyebrow">The Yearbook</div>
+          <h2 className="sec-title">
+            One <em>Frame</em>
+          </h2>
+          <p className="sec-sub">
+            Eleven years deep. The lies got better. The cigars got nicer. The handicaps did not.
+          </p>
         </div>
-        <figcaption className="poster-cap">
-          <span>Tradition · XI</span>
-          <em>Colorado Springs · MMXXVI</em>
-        </figcaption>
-      </figure>
+
+        <figure className="poster">
+          <div className="poster-frame">
+            <Image
+              src="/yearbook.png"
+              alt="Tradition XI — vintage collage: the boys, the bear, the Cadillac, Colorado Springs"
+              width={1041}
+              height={1481}
+              priority={false}
+              sizes="(min-width: 1024px) 540px, (min-width: 560px) 60vw, 92vw"
+              className="poster-img"
+            />
+          </div>
+          <figcaption className="poster-cap">
+            <span>Tradition · XI</span>
+            <em>Colorado Springs · MMXXVI</em>
+          </figcaption>
+        </figure>
+      </div>
     </section>
   );
 }
