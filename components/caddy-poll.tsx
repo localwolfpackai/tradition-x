@@ -140,14 +140,15 @@ export default function CaddyPoll() {
 
   return (
     <section id="caddy" className="sec">
+      <div className="sec-inner sec-inner-narrow">
       <div className="sec-head">
         <div className="sec-eyebrow">Settle It</div>
         <h2 className="sec-title">
           Who&apos;s Your <em>Caddy?</em>
         </h2>
-        <p className="sec-sub">One question. No wrong answers. Possibly some wrong men. Tap to vote.</p>
+        <p className="sec-sub">Tap to vote, idiots.</p>
         <div className="live-badge">
-          <span className="dot" /> Live · 14 phones
+          <span className="dot" /> Live · 12 phones
         </div>
       </div>
 
@@ -216,6 +217,7 @@ export default function CaddyPoll() {
           <div className="tm">{toast}</div>
         </div>
       )}
+      </div>
     </section>
   );
 }
