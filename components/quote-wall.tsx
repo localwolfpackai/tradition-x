@@ -79,7 +79,7 @@ export default function QuoteWall() {
         <h2 className="sec-title">
           The <em>Quote</em> Wall
         </h2>
-        <p className="sec-sub">Drop the line. Tag yourself. Future you will want this.</p>
+        <p className="sec-sub">Tag yourself or whoever said it. Future you will want this.</p>
       </div>
 
       <form className="quote-form" onSubmit={handleSubmit}>

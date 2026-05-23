@@ -146,7 +146,7 @@ export default function CaddyPoll() {
         <h2 className="sec-title">
           Who&apos;s Your <em>Caddy?</em>
         </h2>
-        <p className="sec-sub">One question. No wrong answers. Possibly some wrong men. Tap to vote.</p>
+        <p className="sec-sub">Tap to vote, idiots.</p>
         <div className="live-badge">
           <span className="dot" /> Live · 12 phones
         </div>

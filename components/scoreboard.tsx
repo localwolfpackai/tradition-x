@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { COURSES, ROSTER } from "@/lib/data";
+import PlayerAvatar from "./player-avatar";
 
 type Scores = Record<string, Record<string, number>>;
 
@@ -19,11 +20,6 @@ function aggregateFor(playerNum: number, scores: Scores): number {
     }
   }
   return any ? total : Number.NaN;
-}
-
-function roleLabel(p: (typeof ROSTER)[number]): string {
-  if (p.low) return "★ Lowest HC";
-  return "The Field";
 }
 
 export default function Scoreboard() {
@@ -195,8 +191,8 @@ export default function Scoreboard() {
             <div key={p.num} className={`score-row${isLeader ? " leader" : ""}`}>
               <div className="rank">{idx + 1}</div>
               <div className="who">
-                <b>{p.name}</b>
-                <span>{roleLabel(p)}</span>
+                <PlayerAvatar slug={p.slug} name={p.name} size="sm" highlight={p.low} />
+                <span className="who-name">{p.name}</span>
               </div>
               <input
                 type="number"

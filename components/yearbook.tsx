@@ -14,7 +14,7 @@ export default function Yearbook() {
             One <em>Frame</em>
           </h2>
           <p className="sec-sub">
-            Eleven years deep. The lies got better. The cigars got nicer. The handicaps did not.
+            We&apos;re all a little handicapped if you think about it.
           </p>
         </div>
 

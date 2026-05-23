@@ -1,39 +1,11 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { ROSTER, type Player } from "@/lib/data";
-
-function initials(name: string) {
-  return name
-    .split(/\s+/)
-    .map((n) => n[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-}
+import PlayerAvatar from "./player-avatar";
 
 function PlayerCard({ p }: { p: Player }) {
-  const [hasPhoto, setHasPhoto] = useState(false);
-  const src = `/images/players/${p.slug}.jpg`;
-
-  useEffect(() => {
-    const img = new window.Image();
-    img.onload = () => setHasPhoto(true);
-    img.onerror = () => setHasPhoto(false);
-    img.src = src;
-  }, [src]);
-
   return (
     <div className={`player${p.low ? " low" : ""}`}>
       <div className="pavatar">
-        <div className="pavatar-disc" aria-hidden="true">
-          {hasPhoto ? (
-            /* eslint-disable-next-line @next/next/no-img-element */
-            <img src={src} alt="" />
-          ) : (
-            <span className="pavatar-initials">{initials(p.name)}</span>
-          )}
-        </div>
+        <PlayerAvatar slug={p.slug} name={p.name} size="lg" highlight={p.low} />
         <span className="pavatar-num" aria-hidden="true">
           {p.num}
         </span>

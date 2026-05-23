@@ -585,11 +585,25 @@ section {
     0 8px 16px -8px rgba(7, 42, 30, 0.55),
     inset 0 0 0 3px rgba(7, 42, 30, 0.25);
 }
-.player.low .pavatar-disc {
+.player.low .pavatar-disc,
+.pavatar-disc.is-low {
   border-color: var(--gold);
   box-shadow:
     0 0 0 1px rgba(205, 161, 63, 0.4),
     0 10px 22px -10px rgba(205, 161, 63, 0.5);
+}
+/* Small variant for inline use (scoreboard rows). */
+.pavatar-disc-sm {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-width: 1.5px;
+  box-shadow:
+    0 4px 8px -4px rgba(7, 42, 30, 0.45),
+    inset 0 0 0 2px rgba(7, 42, 30, 0.22);
+}
+.pavatar-disc-sm .pavatar-initials {
+  font-size: 13px;
 }
 .pavatar-disc img {
   width: 100%;
@@ -1055,18 +1069,23 @@ section {
   text-align: center;
 }
 .score-row .who {
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--emerald-900);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
 }
-.score-row .who small {
-  display: block;
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 700;
-  margin-top: 2px;
+.score-row .who-name {
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--emerald-900);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.score-row.leader .who-name {
+  color: var(--clay);
 }
 .score-row input {
   width: 100%;
