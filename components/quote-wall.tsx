@@ -75,11 +75,9 @@ export default function QuoteWall() {
     <section id="quotes" className="sec">
       <div className="sec-inner">
       <div className="sec-head">
-        <div className="sec-eyebrow">Best Lines</div>
         <h2 className="sec-title">
           The <em>Quote</em> Wall
         </h2>
-        <p className="sec-sub">Tag yourself or whoever said it. Future you will want this.</p>
       </div>
 
       <form className="quote-form" onSubmit={handleSubmit}>

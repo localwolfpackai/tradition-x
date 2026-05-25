@@ -5,13 +5,9 @@ export default function Schedule() {
     <section id="schedule" className="sec">
       <div className="sec-inner">
         <div className="sec-head">
-          <div className="sec-eyebrow">The Weekend</div>
           <h2 className="sec-title">
             The <em>Plan</em>
           </h2>
-          <p className="sec-sub">
-            Four days. Four rounds. One trophy. Coffee at sunrise, lies by sundown.
-          </p>
         </div>
 
         <div className="schedule-grid">

@@ -9,13 +9,9 @@ export default function Yearbook() {
     <section id="yearbook" className="sec yearbook">
       <div className="sec-inner sec-inner-narrow">
         <div className="sec-head">
-          <div className="sec-eyebrow">The Yearbook</div>
           <h2 className="sec-title">
             One <em>Frame</em>
           </h2>
-          <p className="sec-sub">
-            We&apos;re all a little handicapped if you think about it.
-          </p>
         </div>
 
         <figure className="poster">

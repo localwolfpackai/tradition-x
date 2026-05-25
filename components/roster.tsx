@@ -32,11 +32,9 @@ export default function Roster() {
     <section id="roster" className="sec">
       <div className="sec-inner">
         <div className="sec-head">
-          <div className="sec-eyebrow">The Field</div>
           <h2 className="sec-title">
             The <em>Roster</em>
           </h2>
-          <p className="sec-sub">Two teams. Six a side. One jacket.</p>
         </div>
 
         {TEAMS.map((t) => {

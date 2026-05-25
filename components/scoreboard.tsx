@@ -156,13 +156,9 @@ export default function Scoreboard() {
     <section id="score" className="sec">
       <div className="sec-inner">
       <div className="sec-head">
-        <div className="sec-eyebrow">The Card</div>
         <h2 className="sec-title">
           <em>Live</em> Scoreboard
         </h2>
-        <p className="sec-sub">
-          Punch your score in after each round. Lowest aggregate gets the jacket — and bragging rights until Tradition XII.
-        </p>
       </div>
 
       <div className="score-tabs" role="tablist">

@@ -142,11 +142,9 @@ export default function CaddyPoll() {
     <section id="caddy" className="sec">
       <div className="sec-inner sec-inner-narrow">
       <div className="sec-head">
-        <div className="sec-eyebrow">Settle It</div>
         <h2 className="sec-title">
           Who&apos;s Your <em>Caddy?</em>
         </h2>
-        <p className="sec-sub">Tap to vote, idiots.</p>
         <div className="live-badge">
           <span className="dot" /> Live · 12 phones
         </div>

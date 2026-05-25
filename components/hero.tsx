@@ -11,7 +11,7 @@ export default function Hero() {
           <Crest size={104} />
         </div>
 
-        <div className="eyebrow">The Tradition Continues</div>
+        <div className="eyebrow">2026</div>
         <h1 className="wordmark">
           Tradition
           <span className="num">— XI —</span>
@@ -20,9 +20,6 @@ export default function Hero() {
         <div className="rule">
           <span>Colorado Springs</span>
         </div>
-        <p className="tag">
-          12 Men · 4 Courses · <b>One Tradition</b> · 2026
-        </p>
 
         <Countdown targetIso={TRIP_START_ISO} />
 
