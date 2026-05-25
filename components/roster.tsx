@@ -21,7 +21,9 @@ function PlayerCard({ p, badge }: { p: Player; badge: string | null }) {
       </div>
       <div className="pinfo">
         <div className="pname">{p.name}</div>
-        <div className="plabel">{p.captain ? "★ Captain" : p.tbd ? "Open Slot" : "The Field"}</div>
+        {(p.captain || p.tbd) && (
+          <div className="plabel">{p.captain ? "★ Captain" : "Open Slot"}</div>
+        )}
       </div>
     </div>
   );
