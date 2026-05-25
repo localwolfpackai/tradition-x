@@ -85,7 +85,7 @@ export default function Scoreboard() {
 
   // Sorted roster by aggregate ascending, NaN players at the bottom.
   const sortedRoster = useMemo(() => {
-    return [...ROSTER].sort((a, b) => {
+    return [...ROSTER].filter((p) => !p.tbd).sort((a, b) => {
       const aa = aggregateFor(a.num, scores);
       const bb = aggregateFor(b.num, scores);
       const aNaN = Number.isNaN(aa);

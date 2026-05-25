@@ -92,6 +92,8 @@ export type Player = {
   slug: string;
   team: TeamId;
   captain?: boolean;
+  /** Unfilled spot — renders as a muted "?" placeholder, no score row. */
+  tbd?: boolean;
   role?: string;
 };
 
@@ -112,7 +114,7 @@ export const ROSTER: Player[] = [
   { num: 9, name: "Dan", slug: "dan", team: "matt" },
   { num: 10, name: "Austin", slug: "austin", team: "matt" },
   { num: 11, name: "Bobby", slug: "bobby", team: "matt" },
-  { num: 12, name: "Coomes", slug: "coomes", team: "matt" },
+  { num: 12, name: "TBD", slug: "tbd", team: "matt", tbd: true },
 ];
 
 export const TOASTS = {

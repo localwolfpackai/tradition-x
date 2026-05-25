@@ -1,18 +1,27 @@
 import { ROSTER, TEAMS, type Player } from "@/lib/data";
 import PlayerAvatar from "./player-avatar";
 
-function PlayerCard({ p, badge }: { p: Player; badge: string }) {
+function PlayerCard({ p, badge }: { p: Player; badge: string | null }) {
   return (
-    <div className={`player team-${p.team}${p.captain ? " is-captain" : ""}`}>
+    <div className={`player team-${p.team}${p.captain ? " is-captain" : ""}${p.tbd ? " is-tbd" : ""}`}>
       <div className="pavatar">
-        <PlayerAvatar slug={p.slug} name={p.name} team={p.team} size="lg" highlight={p.captain} />
-        <span className="pavatar-num" aria-hidden="true">
-          {badge}
-        </span>
+        <PlayerAvatar
+          slug={p.slug}
+          name={p.name}
+          team={p.team}
+          size="lg"
+          highlight={p.captain}
+          placeholder={p.tbd}
+        />
+        {badge !== null && (
+          <span className="pavatar-num" aria-hidden="true">
+            {badge}
+          </span>
+        )}
       </div>
       <div className="pinfo">
         <div className="pname">{p.name}</div>
-        <div className="plabel">{p.captain ? "★ Captain" : "The Field"}</div>
+        <div className="plabel">{p.captain ? "★ Captain" : p.tbd ? "Open Slot" : "The Field"}</div>
       </div>
     </div>
   );
@@ -42,7 +51,11 @@ export default function Roster() {
               </div>
               <div className="roster-grid">
                 {members.map((p) => (
-                  <PlayerCard key={p.num} p={p} badge={p.captain ? "C" : String(++n)} />
+                  <PlayerCard
+                    key={p.num}
+                    p={p}
+                    badge={p.captain ? "C" : p.tbd ? null : String(++n)}
+                  />
                 ))}
               </div>
             </div>

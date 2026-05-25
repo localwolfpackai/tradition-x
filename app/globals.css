@@ -592,6 +592,19 @@ section {
     0 0 0 1px rgba(205, 161, 63, 0.4),
     0 10px 22px -10px rgba(205, 161, 63, 0.5);
 }
+/* Unfilled roster spot — muted, dashed, no glow. */
+.pavatar-disc.is-tbd {
+  background: radial-gradient(circle at 38% 32%, #6c7d72, #2b352f);
+  border-style: dashed;
+  border-color: rgba(245, 237, 214, 0.5);
+  box-shadow: inset 0 0 0 3px rgba(7, 42, 30, 0.18);
+}
+.pavatar-disc.is-tbd .pavatar-initials {
+  color: rgba(251, 245, 227, 0.85);
+}
+.player.is-tbd .pname {
+  color: var(--muted);
+}
 /* Small variant for inline use (scoreboard rows). */
 .pavatar-disc-sm {
   width: 32px;

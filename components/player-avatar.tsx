@@ -11,6 +11,8 @@ type Props = {
   /** "lg" = roster card (84px), "sm" = scoreboard row (32px) */
   size?: "lg" | "sm";
   highlight?: boolean;
+  /** Unfilled roster spot — renders a muted "?" disc instead of a player. */
+  placeholder?: boolean;
 };
 
 /* One tint per team so the 6v6 split reads at a glance: the house emerald for
@@ -39,10 +41,15 @@ export default function PlayerAvatar({
   team,
   size = "lg",
   highlight = false,
+  placeholder = false,
 }: Props) {
   const [photoSrc, setPhotoSrc] = useState<string | null>(null);
 
   useEffect(() => {
+    if (placeholder) {
+      setPhotoSrc(null);
+      return;
+    }
     let cancelled = false;
     let i = 0;
     const tryNext = () => {
@@ -62,17 +69,25 @@ export default function PlayerAvatar({
     return () => {
       cancelled = true;
     };
-  }, [slug]);
+  }, [slug, placeholder]);
 
   const [light, dark] = TEAM_TINT[team];
 
   return (
     <div
-      className={`pavatar-disc pavatar-disc-${size}${highlight ? " is-captain" : ""}`}
-      style={{ background: `radial-gradient(circle at 38% 32%, ${light}, ${dark})` }}
+      className={`pavatar-disc pavatar-disc-${size}${highlight ? " is-captain" : ""}${
+        placeholder ? " is-tbd" : ""
+      }`}
+      style={
+        placeholder
+          ? undefined
+          : { background: `radial-gradient(circle at 38% 32%, ${light}, ${dark})` }
+      }
       aria-hidden="true"
     >
-      {photoSrc ? (
+      {placeholder ? (
+        <span className="pavatar-initials">?</span>
+      ) : photoSrc ? (
         /* eslint-disable-next-line @next/next/no-img-element */
         <img src={photoSrc} alt="" />
       ) : (
