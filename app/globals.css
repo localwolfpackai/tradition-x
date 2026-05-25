@@ -1202,6 +1202,15 @@ section {
 .score-row.leader .who {
   color: var(--clay);
 }
+.score-row.tbd {
+  opacity: 0.5;
+}
+.score-row.tbd .score-open {
+  text-align: center;
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-size: 17px;
+  color: var(--muted);
+}
 .score-foot {
   text-align: center;
   font-size: 10px;

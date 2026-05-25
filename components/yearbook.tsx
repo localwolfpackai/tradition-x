@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 /**
- * YEARBOOK — frames the vintage Tradition XI poster as the centerpiece.
+ * GALLERY — the vintage Tradition XI poster, framed as the centerpiece (one frame for now).
  * Uses next/image so the 3.5 MB source gets served as a ~150 KB WebP on phones.
  */
 export default function Yearbook() {
@@ -10,7 +10,7 @@ export default function Yearbook() {
       <div className="sec-inner sec-inner-narrow">
         <div className="sec-head">
           <h2 className="sec-title">
-            One <em>Frame</em>
+            The <em>Gallery</em>
           </h2>
         </div>
 

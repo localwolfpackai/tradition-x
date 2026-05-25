@@ -23,7 +23,7 @@ const ITEMS: Item[] = [
   { id: "bets", label: "Debate", Icon: Coins },
   { id: "score", label: "Score", Icon: Trophy },
   { id: "quotes", label: "Quotes", Icon: MessageSquareQuote },
-  { id: "yearbook", label: "Lookbook", Icon: BookOpen },
+  { id: "yearbook", label: "Gallery", Icon: BookOpen },
 ];
 
 export default function BottomNav() {

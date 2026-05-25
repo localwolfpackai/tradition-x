@@ -205,6 +205,16 @@ export default function Scoreboard() {
             </div>
           );
         })}
+        {ROSTER.filter((p) => p.tbd).map((p, i) => (
+          <div key={p.num} className="score-row tbd">
+            <div className="rank">{sortedRoster.length + i + 1}</div>
+            <div className="who">
+              <PlayerAvatar slug={p.slug} name={p.name} team={p.team} size="sm" />
+              <span className="who-name">{p.name}</span>
+            </div>
+            <div className="score-open">—</div>
+          </div>
+        ))}
       </div>
 
       <div className="score-foot">
