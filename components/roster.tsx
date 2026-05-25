@@ -1,18 +1,18 @@
-import { ROSTER, type Player } from "@/lib/data";
+import { ROSTER, TEAMS, type Player } from "@/lib/data";
 import PlayerAvatar from "./player-avatar";
 
-function PlayerCard({ p }: { p: Player }) {
+function PlayerCard({ p, badge }: { p: Player; badge: string }) {
   return (
-    <div className={`player${p.low ? " low" : ""}`}>
+    <div className={`player team-${p.team}${p.captain ? " is-captain" : ""}`}>
       <div className="pavatar">
-        <PlayerAvatar slug={p.slug} name={p.name} num={p.num} size="lg" highlight={p.low} />
+        <PlayerAvatar slug={p.slug} name={p.name} team={p.team} size="lg" highlight={p.captain} />
         <span className="pavatar-num" aria-hidden="true">
-          {p.num}
+          {badge}
         </span>
       </div>
       <div className="pinfo">
         <div className="pname">{p.name}</div>
-        <div className="plabel">{p.low ? "★ Lowest Handicap" : "The Field"}</div>
+        <div className="plabel">{p.captain ? "★ Captain" : "The Field"}</div>
       </div>
     </div>
   );
@@ -27,14 +27,27 @@ export default function Roster() {
           <h2 className="sec-title">
             The <em>Roster</em>
           </h2>
-          <p className="sec-sub">Twelve deep. One trophy. Zero excuses.</p>
+          <p className="sec-sub">Two teams. Six a side. One jacket.</p>
         </div>
 
-        <div className="roster-grid">
-          {ROSTER.map((p) => (
-            <PlayerCard key={p.num} p={p} />
-          ))}
-        </div>
+        {TEAMS.map((t) => {
+          const members = ROSTER.filter((p) => p.team === t.id);
+          let n = 0;
+          return (
+            <div key={t.id} className={`team-block team-${t.id}`}>
+              <div className="team-head">
+                <span className="team-dot" aria-hidden="true" />
+                <span className="team-name">{t.name}</span>
+                <span className="team-cap">Captain · {t.captainName}</span>
+              </div>
+              <div className="roster-grid">
+                {members.map((p) => (
+                  <PlayerCard key={p.num} p={p} badge={p.captain ? "C" : String(++n)} />
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

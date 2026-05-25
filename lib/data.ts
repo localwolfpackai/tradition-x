@@ -72,29 +72,47 @@ export const COURSES: Course[] = [
   },
 ];
 
+export type TeamId = "nate" | "matt";
+
+export type TeamMeta = {
+  id: TeamId;
+  name: string;
+  captainName: string;
+};
+
+/* The 6v6 split. Order here drives the order of the team blocks on the roster. */
+export const TEAMS: TeamMeta[] = [
+  { id: "nate", name: "Team Nate", captainName: "Nate" },
+  { id: "matt", name: "Team Matt", captainName: "Matt" },
+];
+
 export type Player = {
   num: number;
   name: string;
   slug: string;
-  low?: boolean;
+  team: TeamId;
+  captain?: boolean;
   role?: string;
 };
 
-/* Drop a photo named after the slug into public/images/players/ (jpg or png,
-   e.g. bobby.jpg) and the card swaps from the colored placeholder to the photo. */
+/* Two teams, six a side. Captains lead each block. Drop a photo named after the
+   slug into public/images/players/ (jpg or png, e.g. nate.jpg) and the card
+   swaps from the team-tinted placeholder to the photo. */
 export const ROSTER: Player[] = [
-  { num: 1, name: "Bobby", slug: "bobby", low: true },
-  { num: 2, name: "Brian", slug: "brian" },
-  { num: 3, name: "Lupo", slug: "lupo" },
-  { num: 4, name: "Dan", slug: "dan" },
-  { num: 5, name: "Josh", slug: "josh" },
-  { num: 6, name: "Kyle", slug: "kyle" },
-  { num: 7, name: "Matt", slug: "matt" },
-  { num: 8, name: "Nate", slug: "nate" },
-  { num: 9, name: "Steve", slug: "steve" },
-  { num: 10, name: "Coomes", slug: "coomes" },
-  { num: 11, name: "Jordan", slug: "jordan" },
-  { num: 12, name: "Austin", slug: "austin" },
+  // Team Nate
+  { num: 1, name: "Nate", slug: "nate", team: "nate", captain: true },
+  { num: 2, name: "Lupo", slug: "lupo", team: "nate" },
+  { num: 3, name: "Kyle", slug: "kyle", team: "nate" },
+  { num: 4, name: "Wade", slug: "wade", team: "nate" },
+  { num: 5, name: "Steve", slug: "steve", team: "nate" },
+  { num: 6, name: "Brian", slug: "brian", team: "nate" },
+  // Team Matt
+  { num: 7, name: "Matt", slug: "matt", team: "matt", captain: true },
+  { num: 8, name: "Josh", slug: "josh", team: "matt" },
+  { num: 9, name: "Dan", slug: "dan", team: "matt" },
+  { num: 10, name: "Austin", slug: "austin", team: "matt" },
+  { num: 11, name: "Bobby", slug: "bobby", team: "matt" },
+  { num: 12, name: "Coomes", slug: "coomes", team: "matt" },
 ];
 
 export const TOASTS = {

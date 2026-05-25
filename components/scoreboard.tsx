@@ -191,7 +191,7 @@ export default function Scoreboard() {
             <div key={p.num} className={`score-row${isLeader ? " leader" : ""}`}>
               <div className="rank">{idx + 1}</div>
               <div className="who">
-                <PlayerAvatar slug={p.slug} name={p.name} num={p.num} size="sm" highlight={p.low} />
+                <PlayerAvatar slug={p.slug} name={p.name} team={p.team} size="sm" highlight={p.captain} />
                 <span className="who-name">{p.name}</span>
               </div>
               <input

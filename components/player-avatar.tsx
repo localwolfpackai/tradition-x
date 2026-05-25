@@ -1,34 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { TeamId } from "@/lib/data";
 
 type Props = {
   slug: string;
   name: string;
-  /** Roster number (1..N) — drives the placeholder tint so each player reads distinct. */
-  num: number;
+  /** Which side they're on — drives the placeholder tint so the two teams read apart. */
+  team: TeamId;
   /** "lg" = roster card (84px), "sm" = scoreboard row (32px) */
   size?: "lg" | "sm";
   highlight?: boolean;
 };
 
-/* Deep, distinct tones so the initials discs read as 12 individual avatars
-   rather than one identical green. Gold/cream initials sit on the light center,
-   so every base stays dark/saturated enough to keep them legible. */
-const PALETTE: [string, string][] = [
-  ["#1d6b4c", "#0c3b2a"], // emerald
-  ["#1b6b6b", "#0a3838"], // teal
-  ["#1f5a8a", "#0c2c47"], // ocean
-  ["#3b3f8f", "#181a47"], // indigo
-  ["#5b3b8f", "#241547"], // violet
-  ["#7a2f6b", "#331533"], // plum
-  ["#8a2f3f", "#421521"], // wine
-  ["#9c4a35", "#4a1f15"], // brick
-  ["#4f5a22", "#232c0e"], // olive
-  ["#2f6b3b", "#143319"], // forest
-  ["#3f5a6b", "#1a2933"], // slate
-  ["#9c2f4a", "#471523"], // crimson
-];
+/* One tint per team so the 6v6 split reads at a glance: the house emerald for
+   Team Nate, a contrasting clay for Team Matt. Both stay dark/saturated enough
+   to keep the gold initials legible. Captains get the gold ring via `highlight`. */
+const TEAM_TINT: Record<TeamId, [string, string]> = {
+  nate: ["#1d6b4c", "#0c3b2a"], // house emerald
+  matt: ["#b8503a", "#4a1c14"], // clay
+};
 
 /* Photo drop-in formats, tried in order. First hit wins; falls back to the tint. */
 const EXTS = ["jpg", "png"];
@@ -45,7 +36,7 @@ function initials(name: string) {
 export default function PlayerAvatar({
   slug,
   name,
-  num,
+  team,
   size = "lg",
   highlight = false,
 }: Props) {
@@ -73,11 +64,11 @@ export default function PlayerAvatar({
     };
   }, [slug]);
 
-  const [light, dark] = PALETTE[(num - 1) % PALETTE.length];
+  const [light, dark] = TEAM_TINT[team];
 
   return (
     <div
-      className={`pavatar-disc pavatar-disc-${size}${highlight ? " is-low" : ""}`}
+      className={`pavatar-disc pavatar-disc-${size}${highlight ? " is-captain" : ""}`}
       style={{ background: `radial-gradient(circle at 38% 32%, ${light}, ${dark})` }}
       aria-hidden="true"
     >
