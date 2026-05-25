@@ -1309,20 +1309,52 @@ section {
 .quote-form button:active {
   transform: scale(0.98);
 }
+.quote-grid {
+  column-gap: 14px;
+}
+@media (min-width: 600px) {
+  .quote-grid {
+    columns: 2;
+  }
+}
+@media (min-width: 920px) {
+  .quote-grid {
+    columns: 3;
+  }
+}
 .quote {
   background: var(--paper);
   color: var(--ink);
   border-radius: var(--r-md);
-  padding: 14px 16px 12px;
-  margin-bottom: 10px;
+  padding: 28px 16px 14px;
+  margin: 0 0 14px;
   position: relative;
   box-shadow: var(--shadow-card);
   border-left: 4px solid var(--gold);
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.quote::before {
+  content: "\201C";
+  position: absolute;
+  top: 4px;
+  left: 13px;
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-size: 50px;
+  line-height: 1;
+  color: rgba(205, 161, 63, 0.22);
+  pointer-events: none;
+}
+.quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
 }
 .quote .qt {
   font-family: var(--font-dm-serif), Georgia, serif;
-  font-size: 16px;
-  line-height: 1.4;
+  font-style: italic;
+  font-size: 16.5px;
+  line-height: 1.45;
   color: var(--emerald-900);
 }
 .quote .qm {

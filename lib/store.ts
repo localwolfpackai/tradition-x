@@ -38,7 +38,7 @@ const SEED: State = {
   quotes: [
     {
       id: "seed-1",
-      text: "I didn't come 1,500 miles to lay up.",
+      text: "Ya, let's fly to another state to play someone else's ball.",
       by: "Wade",
       ts: Date.now() - 1000 * 60 * 60 * 24,
     },

@@ -172,7 +172,6 @@ export default function Scoreboard() {
             onClick={() => setRoundIdx(i)}
           >
             Round {i + 1}
-            <span> · {c.name}</span>
           </button>
         ))}
       </div>

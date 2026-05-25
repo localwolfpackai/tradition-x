@@ -15,7 +15,7 @@ export default function SideBets() {
       <div className="sec-inner">
         <div className="sec-head">
           <h2 className="sec-title">
-            <em>Side</em> Bets
+            Up for <em>Debate</em>
           </h2>
         </div>
 
@@ -30,7 +30,7 @@ export default function SideBets() {
         </div>
 
         <p className="sec-sub">
-          Total buy-in if you&apos;re all-in on every bet: <b>${total}</b> per man, per round where applicable.
+          Nothing&apos;s locked till the group agrees. Every call greenlit: <b>${total}</b> a man, per round where it applies.
         </p>
       </div>
     </section>

@@ -20,7 +20,7 @@ const ITEMS: Item[] = [
   { id: "courses", label: "Courses", Icon: Flag },
   { id: "roster", label: "Roster", Icon: Users },
   { id: "caddy", label: "Caddy", Icon: ListChecks },
-  { id: "bets", label: "Bets", Icon: Coins },
+  { id: "bets", label: "Debate", Icon: Coins },
   { id: "score", label: "Score", Icon: Trophy },
   { id: "quotes", label: "Quotes", Icon: MessageSquareQuote },
   { id: "yearbook", label: "Lookbook", Icon: BookOpen },
