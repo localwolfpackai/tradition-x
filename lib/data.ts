@@ -140,7 +140,7 @@ export const TOASTS = {
   ],
 };
 
-/* ===== SCHEDULE — Tradition XI weekend itinerary ===== */
+/* ===== SCHEDULE — Tradition XI · four rounds, team match play ===== */
 export type DayPlan = {
   name: string;
   date: string;
@@ -150,41 +150,36 @@ export type DayPlan = {
 export const SCHEDULE: DayPlan[] = [
   {
     name: "Thursday",
-    date: "Aug 6 · Arrival",
+    date: "Aug 6 · Round 1",
     rows: [
-      { time: "All day", title: "Fly into DEN", sub: "Convoy SUVs → Colorado Springs" },
-      { time: "5:30 PM", title: "Check-in & beers on the deck", sub: "House HQ" },
-      { time: "7:30 PM", title: "Opening dinner", sub: "Wade's call — steakhouse downtown" },
-      { time: "10:00 PM", title: "Cigars + handicaps roast", sub: "Mandatory attendance" },
+      { time: "Morning", title: "Arrive + range", sub: "Convoy from DEN · loosen up" },
+      { time: "Tee time", title: "Round 1 · Team Net", sub: "CommonGround · 1 team point" },
+      { time: "Evening", title: "Opening dinner", sub: "Wade's call — steakhouse downtown" },
     ],
   },
   {
     name: "Friday",
-    date: "Aug 7 · Round 1",
+    date: "Aug 7 · Rounds 2 & 3",
     rows: [
-      { time: "6:30 AM", title: "Coffee + range", sub: "Wake the legs up" },
-      { time: "8:00 AM", title: "Tee time — CommonGround", sub: "Aurora · Tom Doak links" },
-      { time: "2:00 PM", title: "Lunch at the turn-house", sub: "Beers · scorecards in" },
-      { time: "8:00 PM", title: "Group dinner + skins payout", sub: "Day 1 leader buys a round" },
+      { time: "AM", title: "Round 2 · Vegas", sub: "Fossil Trace · teams of 2 · captains pick · 3 pts" },
+      { time: "PM", title: "Round 3 · Fourball", sub: "Red Hawk Ridge · teams of 2 · captains pick · 3 pts" },
+      { time: "Evening", title: "Steaks + cigars", sub: "House HQ · talk your book" },
     ],
   },
   {
     name: "Saturday",
-    date: "Aug 8 · Double Header",
+    date: "Aug 8 · Round 4",
     rows: [
-      { time: "7:00 AM", title: "Tee time — Fossil Trace", sub: "Golden · dinosaur tracks back-9" },
-      { time: "1:30 PM", title: "Tee time — Red Hawk Ridge", sub: "Castle Rock · the gauntlet" },
-      { time: "7:30 PM", title: "Steaks on the grill", sub: "House HQ · Hilary or Megan?" },
+      { time: "AM", title: "Round 4 · Singles", sub: "Bear Dance · head-to-head match play · seeded by net · 6 pts" },
+      { time: "Afternoon", title: "Awards", sub: "Team win · low net · low gross · MVP" },
       { time: "Late", title: "Caddy vote results", sub: "Toasts. Roasts. Receipts." },
     ],
   },
   {
     name: "Sunday",
-    date: "Aug 9 · The Closer",
+    date: "Aug 9 · Departure",
     rows: [
-      { time: "7:30 AM", title: "Tee time — Bear Dance", sub: "Larkspur · longest in CO" },
-      { time: "2:00 PM", title: "Trophy ceremony", sub: "Lowest aggregate wins the jacket" },
-      { time: "4:00 PM", title: "Wrap-up + travel", sub: "Hugs. Lies. Next year already booked." },
+      { time: "AM", title: "Wrap-up + travel", sub: "Hugs. Lies. Next year's teams already drafted." },
     ],
   },
 ];
@@ -225,7 +220,7 @@ export const BETS: Bet[] = [
     name: "Aggregate (4-Round)",
     buyIn: "$50",
     desc:
-      "Lowest total across all four rounds takes the jacket. <b>Sandbagging will be loudly discussed.</b>",
+      "Lowest gross total across all four rounds takes the cash pot. <b>The jacket goes to the winning team</b> — this one's just pride.",
   },
 ];
 

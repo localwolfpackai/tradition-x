@@ -29,6 +29,22 @@ export default function Schedule() {
             </div>
           ))}
         </div>
+
+        <div className="fineprint">
+          <div className="fineprint-title">The Fine Print</div>
+          <ul>
+            <li>Teams are drafted at the end of each Tradition for the next.</li>
+            <li>Handicaps finalized the day before — established GHIN or 18Birdies required.</li>
+            <li>Captains rotate; everyone serves once before repeats.</li>
+            <li>
+              Run by Wade. Settle up at{" "}
+              <a href="https://venmo.com/u/Wade-Kegley" target="_blank" rel="noopener noreferrer">
+                @Wade-Kegley
+              </a>
+              .
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );

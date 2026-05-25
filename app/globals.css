@@ -1024,6 +1024,39 @@ section {
   color: var(--muted);
   font-size: 11px;
 }
+.fineprint {
+  margin-top: 8px;
+  border-top: 1px dashed rgba(21, 84, 60, 0.25);
+  padding-top: 14px;
+}
+.fineprint-title {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--gold-deep);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.fineprint ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 560px;
+  display: grid;
+  gap: 6px;
+}
+.fineprint li {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+}
+.fineprint a {
+  color: var(--emerald-700);
+  font-weight: 700;
+  text-decoration: underline;
+}
 
 /* ====== SIDE BETS ====== */
 #bets {
@@ -1177,6 +1210,43 @@ section {
   font-weight: 700;
   color: var(--muted);
   margin-top: 10px;
+}
+.awards {
+  margin-top: 20px;
+  background: var(--paper);
+  border: 1px solid rgba(205, 161, 63, 0.45);
+  border-radius: var(--r-md);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-card);
+}
+.awards-title {
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-size: 18px;
+  color: var(--emerald-900);
+  text-align: center;
+  margin-bottom: 12px;
+}
+.awards-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px 16px;
+}
+.awards-list li {
+  border-left: 2px solid var(--gold);
+  padding-left: 10px;
+}
+.awards-list b {
+  display: block;
+  font-size: 13.5px;
+  color: var(--emerald-900);
+  font-weight: 700;
+}
+.awards-list span {
+  font-size: 11px;
+  color: var(--muted);
 }
 
 /* ====== QUOTE WALL ====== */

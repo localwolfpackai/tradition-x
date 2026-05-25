@@ -213,6 +213,28 @@ export default function Scoreboard() {
           ? `Aggregate after Round ${latestRoundWithData + 1} · Leader: ${leaderName} (-${leaderGap})`
           : "Awaiting tee time."}
       </div>
+
+      <div className="awards">
+        <div className="awards-title">The Hardware</div>
+        <ul className="awards-list">
+          <li>
+            <b>Team Win</b>
+            <span>Awarded to the winning captain</span>
+          </li>
+          <li>
+            <b>Lowest Net</b>
+            <span>Best handicapped performance</span>
+          </li>
+          <li>
+            <b>Lowest Gross</b>
+            <span>No handicaps included</span>
+          </li>
+          <li>
+            <b>MVP</b>
+            <span>Voted on by the field</span>
+          </li>
+        </ul>
+      </div>
       </div>
     </section>
   );
