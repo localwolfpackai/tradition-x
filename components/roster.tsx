@@ -5,7 +5,7 @@ function PlayerCard({ p }: { p: Player }) {
   return (
     <div className={`player${p.low ? " low" : ""}`}>
       <div className="pavatar">
-        <PlayerAvatar slug={p.slug} name={p.name} size="lg" highlight={p.low} />
+        <PlayerAvatar slug={p.slug} name={p.name} num={p.num} size="lg" highlight={p.low} />
         <span className="pavatar-num" aria-hidden="true">
           {p.num}
         </span>

@@ -80,8 +80,8 @@ export type Player = {
   role?: string;
 };
 
-/* Drop a JPG named after the slug into public/images/players/ (e.g. bobby.jpg)
-   and the card will swap from initials to the photo automatically. */
+/* Drop a photo named after the slug into public/images/players/ (jpg or png,
+   e.g. bobby.jpg) and the card swaps from the colored placeholder to the photo. */
 export const ROSTER: Player[] = [
   { num: 1, name: "Bobby", slug: "bobby", low: true },
   { num: 2, name: "Brian", slug: "brian" },
@@ -94,7 +94,7 @@ export const ROSTER: Player[] = [
   { num: 9, name: "Steve", slug: "steve" },
   { num: 10, name: "Coomes", slug: "coomes" },
   { num: 11, name: "Jordan", slug: "jordan" },
-  { num: 12, name: "Sam", slug: "sam" },
+  { num: 12, name: "Austin", slug: "austin" },
 ];
 
 export const TOASTS = {
