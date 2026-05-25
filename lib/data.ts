@@ -150,7 +150,7 @@ export type DayPlan = {
 export const SCHEDULE: DayPlan[] = [
   {
     name: "Thursday",
-    date: "Aug 13 · Arrival",
+    date: "Aug 6 · Arrival",
     rows: [
       { time: "All day", title: "Fly into DEN", sub: "Convoy SUVs → Colorado Springs" },
       { time: "5:30 PM", title: "Check-in & beers on the deck", sub: "House HQ" },
@@ -160,7 +160,7 @@ export const SCHEDULE: DayPlan[] = [
   },
   {
     name: "Friday",
-    date: "Aug 14 · Round 1",
+    date: "Aug 7 · Round 1",
     rows: [
       { time: "6:30 AM", title: "Coffee + range", sub: "Wake the legs up" },
       { time: "8:00 AM", title: "Tee time — CommonGround", sub: "Aurora · Tom Doak links" },
@@ -170,7 +170,7 @@ export const SCHEDULE: DayPlan[] = [
   },
   {
     name: "Saturday",
-    date: "Aug 15 · Double Header",
+    date: "Aug 8 · Double Header",
     rows: [
       { time: "7:00 AM", title: "Tee time — Fossil Trace", sub: "Golden · dinosaur tracks back-9" },
       { time: "1:30 PM", title: "Tee time — Red Hawk Ridge", sub: "Castle Rock · the gauntlet" },
@@ -180,7 +180,7 @@ export const SCHEDULE: DayPlan[] = [
   },
   {
     name: "Sunday",
-    date: "Aug 16 · The Closer",
+    date: "Aug 9 · The Closer",
     rows: [
       { time: "7:30 AM", title: "Tee time — Bear Dance", sub: "Larkspur · longest in CO" },
       { time: "2:00 PM", title: "Trophy ceremony", sub: "Lowest aggregate wins the jacket" },
@@ -229,5 +229,5 @@ export const BETS: Bet[] = [
   },
 ];
 
-/* ===== Trip start (for the countdown) — Aug 13, 2026 ===== */
-export const TRIP_START_ISO = "2026-08-13T08:00:00-06:00";
+/* ===== Trip start (for the countdown) — Aug 6, 2026 ===== */
+export const TRIP_START_ISO = "2026-08-06T08:00:00-06:00";
