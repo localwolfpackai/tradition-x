@@ -114,7 +114,7 @@ export const ROSTER: Player[] = [
   { num: 9, name: "Dan", slug: "dan", team: "matt" },
   { num: 10, name: "Austin", slug: "austin", team: "matt" },
   { num: 11, name: "Bobby", slug: "bobby", team: "matt" },
-  { num: 12, name: "TBD", slug: "tbd", team: "matt", tbd: true },
+  { num: 12, name: "Tim", slug: "tim", team: "matt" },
 ];
 
 export const TOASTS = {
