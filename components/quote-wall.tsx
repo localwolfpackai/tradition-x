@@ -103,7 +103,15 @@ export default function QuoteWall() {
       </form>
 
       {quotes.length === 0 ? (
-        <div className="quote-empty">No quotes yet. Be the first asshole to break the seal.</div>
+        <div className="quote-grid">
+          {/* Ghost quote: hides as soon as the first real quote lands. Sets the tone
+              of the wall instead of leaving an empty form scratching at the boys. */}
+          <div className="quote is-ghost" aria-hidden="true">
+            <div className="qt">I&apos;m just here so I don&apos;t get fined.</div>
+            <div className="qm">— Phantom, Tradition X</div>
+          </div>
+          <div className="quote-empty">Be the first to break the seal.</div>
+        </div>
       ) : (
         <div className="quote-grid">
           {quotes.map((q) => (

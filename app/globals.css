@@ -1388,6 +1388,18 @@ section {
   font-weight: 700;
   padding: 18px 0;
 }
+/* Ghost quote — placeholder so the wall doesn't feel empty before the first
+   real quote lands. Subdued + dashed border so it reads as a hint, not a peer. */
+.quote.is-ghost {
+  opacity: 0.55;
+  border-left-style: dashed;
+  border-left-color: var(--gold-deep);
+  background: color-mix(in oklch, var(--paper) 78%, transparent);
+}
+.quote.is-ghost:hover {
+  transform: none;
+  box-shadow: var(--shadow-card);
+}
 
 /* ====== FOOTER ====== */
 .footer {
