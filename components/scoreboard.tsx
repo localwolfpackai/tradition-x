@@ -157,7 +157,7 @@ export default function Scoreboard() {
       <div className="sec-inner">
       <div className="sec-head">
         <h2 className="sec-title">
-          <em>Live</em> Scoreboard
+          The <em>Scoreboard</em>
         </h2>
       </div>
 
