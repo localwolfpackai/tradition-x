@@ -34,3 +34,21 @@ export async function POST(req: Request) {
   const sorted = [...s.quotes].sort((a, b) => b.ts - a.ts);
   return Response.json({ quotes: sorted });
 }
+
+// Delete a single quote by id. Used to clear test quotes, regrettable late-night
+// posts, or anything the group decides shouldn't be on the wall. No auth — this
+// is a 12-friend app, friction would be more annoying than the rare misuse.
+//   curl -X DELETE 'https://tradition-xi.vercel.app/api/quotes?id=<uuid>'
+export async function DELETE(req: Request) {
+  const id = new URL(req.url).searchParams.get("id");
+  if (!id) {
+    return Response.json({ error: "missing id" }, { status: 400 });
+  }
+
+  const s = await mutateState((st) => {
+    st.quotes = st.quotes.filter((q) => q.id !== id);
+  });
+
+  const sorted = [...s.quotes].sort((a, b) => b.ts - a.ts);
+  return Response.json({ quotes: sorted });
+}
