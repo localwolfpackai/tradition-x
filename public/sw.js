@@ -1,6 +1,6 @@
 // Tradition XI — offline-first service worker.
 // Cache name is versioned; bump the suffix to force a full purge on next activate.
-const CACHE = "tradition-xi-v2";
+const CACHE = "tradition-xi-v3";
 
 const PRECACHE = [
   "/",
