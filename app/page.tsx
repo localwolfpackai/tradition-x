@@ -35,7 +35,7 @@ export default function Home() {
         <Yearbook />
         <footer className="footer">
           <div className="fm">See you on the first tee</div>
-          <div className="fl">Tradition XI · Colorado Springs · MMXXVI</div>
+          <div className="fl">Tradition XI · Denver · MMXXVI</div>
         </footer>
       </div>
       <BottomNav />

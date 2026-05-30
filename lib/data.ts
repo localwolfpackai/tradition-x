@@ -16,20 +16,34 @@ export type Course = {
 export const COURSES: Course[] = [
   {
     round: 1,
+    name: "Riverdale Dunes",
+    loc: "Brighton, CO",
+    designer: "Pete & Perry Dye · 1985",
+    stats: [
+      ["Par", "72"],
+      ["Style", "Links"],
+      ["Vibe", "Opener"],
+    ],
+    url: "https://www.riverdalegolf.com/",
+    blurb:
+      "The Dyes dropped a Scottish links on the high plains northeast of Denver in '85 and it still plays like they meant it. Dune-shaped greens, fescue that hides Pro V1s like coins in a couch, wind that arrives unannounced and stays for the round. <b>We open here. Scramble format — pick your shot, then pray.</b>",
+  },
+  {
+    round: 2,
     name: "CommonGround",
     loc: "Aurora, CO",
     designer: "Tom Doak · 2009",
     stats: [
       ["Par", "72"],
       ["Style", "Links"],
-      ["Vibe", "Opener"],
+      ["Vibe", "Friday Wake-Up"],
     ],
     url: "https://www.commongroundgc.com/",
     blurb:
-      "Tom Doak's CommonGround is the kind of course that humbles you <i>politely</i> — an Aurora muni built to feel like a 1920s heirloom. Wide fairways that whisper \"go ahead, swing hard\" right before the native grass eats your Pro V1. <b>We open here. Set the tone, or get told.</b>",
+      "Tom Doak's CommonGround is the kind of course that humbles you <i>politely</i> — an Aurora muni built to feel like a 1920s heirloom. Wide fairways that whisper \"go ahead, swing hard\" right before the native grass eats your Pro V1. <b>Team Net format. Bring your A handicap or carry your captain.</b>",
   },
   {
-    round: 2,
+    round: 3,
     name: "Fossil Trace",
     loc: "Golden, CO",
     designer: "Jim Engh · 2003",
@@ -40,21 +54,7 @@ export const COURSES: Course[] = [
     ],
     url: "https://fossiltrace.com/",
     blurb:
-      "Fossil Trace has actual dinosaur tracks on the back nine — fitting, since that's roughly how long ago you last broke 90. Engh carved it out of an old clay quarry and the views will distract you straight into a double. <b>Gorgeous, sneaky, and happy to call your money a souvenir.</b>",
-  },
-  {
-    round: 3,
-    name: "Red Hawk Ridge",
-    loc: "Castle Rock, CO",
-    designer: "Jim Engh · 1999",
-    stats: [
-      ["Par", "72"],
-      ["Yards", "6,942"],
-      ["Vibe", "Target Golf"],
-    ],
-    url: "https://redhawkridge.com/",
-    blurb:
-      "Engh's other masterpiece, and it does <i>not</i> care about your feelings. Tight, tumbling target golf where \"lay up\" becomes a personality trait by hole four. <b>Play smart, it rewards you. Play hero ball and it mails the wreckage to the group chat.</b>",
+      "Fossil Trace has actual dinosaur tracks on the back nine — fitting, since that's roughly how long ago you last broke 90. Engh carved it out of an old clay quarry and the views will distract you straight into a double. <b>Best Ball with your partner. Gorgeous, sneaky, and happy to call your money a souvenir.</b>",
   },
   {
     round: 4,
@@ -68,7 +68,7 @@ export const COURSES: Course[] = [
     ],
     url: "https://www.beardancegolf.com/",
     blurb:
-      "Bear Dance will eat your lunch and post the receipt. The longest course in Colorado, parked at 6,800 feet where every drive thinks it's a hero and every approach comes up short anyway. Rated the state's best public track for a decade-plus — <b>and it knows it. Survive it, the trophy's yours.</b>",
+      "Bear Dance will eat your lunch and post the receipt. The longest course in Colorado, parked at 6,800 feet where every drive thinks it's a hero and every approach comes up short anyway. Rated the state's best public track for a decade-plus — <b>Singles match play. Survive it, the jacket's yours.</b>",
   },
 ];
 
@@ -153,7 +153,7 @@ export const SCHEDULE: DayPlan[] = [
     date: "Aug 6 · Round 1",
     rows: [
       { time: "Morning", title: "Arrive + range", sub: "Convoy from DEN · loosen up" },
-      { time: "Tee time", title: "Round 1 · Team Net", sub: "CommonGround · 1 team point" },
+      { time: "Tee time", title: "Round 1 · Scramble", sub: "Riverdale Dunes · teams of 4 · 3 pts" },
       { time: "Evening", title: "Opening dinner", sub: "Wade's call — steakhouse downtown" },
     ],
   },
@@ -161,8 +161,8 @@ export const SCHEDULE: DayPlan[] = [
     name: "Friday",
     date: "Aug 7 · Rounds 2 & 3",
     rows: [
-      { time: "AM", title: "Round 2 · Vegas", sub: "Fossil Trace · teams of 2 · captains pick · 3 pts" },
-      { time: "PM", title: "Round 3 · Fourball", sub: "Red Hawk Ridge · teams of 2 · captains pick · 3 pts" },
+      { time: "AM", title: "Round 2 · Team Net", sub: "CommonGround · best net per team · 1.5 pts" },
+      { time: "PM", title: "Round 3 · Best Ball", sub: "Fossil Trace · teams of 2 · best ball each hole · 3 pts" },
       { time: "Evening", title: "Steaks + cigars", sub: "House HQ · talk your book" },
     ],
   },

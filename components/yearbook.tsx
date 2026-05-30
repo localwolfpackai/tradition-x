@@ -18,7 +18,7 @@ export default function Yearbook() {
           <div className="poster-frame">
             <Image
               src="/yearbook.png"
-              alt="Tradition XI — vintage collage: the boys, the bear, the Cadillac, Colorado Springs"
+              alt="Tradition XI — vintage collage: the boys, the bear, the Cadillac, Denver"
               width={1041}
               height={1481}
               priority={false}
@@ -28,7 +28,7 @@ export default function Yearbook() {
           </div>
           <figcaption className="poster-cap">
             <span>Tradition · XI</span>
-            <em>Colorado Springs · MMXXVI</em>
+            <em>Denver · MMXXVI</em>
           </figcaption>
         </figure>
       </div>

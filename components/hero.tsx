@@ -18,7 +18,7 @@ export default function Hero() {
         </h1>
 
         <div className="rule">
-          <span>Colorado Springs</span>
+          <span>Denver</span>
         </div>
 
         <Countdown targetIso={TRIP_START_ISO} />

@@ -1,6 +1,6 @@
 # Tradition XI
 
-Companion PWA for **Tradition XI** — the annual golf trip, Colorado Springs, **Aug 6–9, 2026**. One installable page: a countdown, the format and schedule, the courses, the 6v6 teams, a live scoreboard, the caddy poll, a quote wall, and a poster gallery.
+Companion PWA for **Tradition XI** — the annual golf trip, Denver, **Aug 6–9, 2026**. One installable page: a countdown, the format and schedule, the courses, the 6v6 teams, a live scoreboard, the caddy poll, a quote wall, and a poster gallery.
 
 ## Stack
 

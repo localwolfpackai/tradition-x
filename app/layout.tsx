@@ -23,9 +23,9 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Tradition XI — Colorado Springs 2026",
+  title: "Tradition XI — Denver 2026",
   description:
-    "Tradition XI · Colorado Springs · 12 men · 4 courses · One tradition. The companion app — courses, roster, caddy poll, open debates, scoreboard, and the quote wall.",
+    "Tradition XI · Denver · 12 men · 4 courses · One tradition. The companion app — courses, roster, caddy poll, open debates, scoreboard, and the quote wall.",
   applicationName: "Tradition XI",
   appleWebApp: {
     capable: true,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Tradition XI — Colorado Springs 2026",
+    title: "Tradition XI — Denver 2026",
     description: "12 men · 4 courses · One tradition.",
     type: "website",
   },
